@@ -1,0 +1,30 @@
+            - name: Upload files to Aliyun OSS (incremental)
+  # You may pin to the exact commit or the version.
+  # uses: Menci/upload-to-oss@bada96038fb29ec0502ab8cc0ab86107623feaf1
+  uses: Menci/upload-to-oss@beta-v3
+  with:
+    # The accessKeyId used to authenticate with Aliyun. Please specify `access-key-id` and `access-key-secret` or specify `security-token`.
+    access-key-id: # optional, default is 
+    # The accessKeySecret used to authenticate with Aliyun. Please specify `access-key-id` and `access-key-secret` or specify `security-token`.
+    access-key-secret: # optional, default is 
+    # The securityToken (STS) used to authenticate with Aliyun. Please specify `access-key-id` and `access-key-secret` or specify `security-token`.
+    security-token: # optional, default is 
+    # The Aliyun OSS bucket name to upload to.
+    bucket: 
+    # The Aliyun OSS endpoint used to upload.
+    endpoint: 
+    # The local path of directory to upload. Must point to a directory.
+    local-path: 
+    # The remote path (prefix) to upload to.
+    remote-path: 
+    # The regex of filenames included. All files by default.
+    include-regex: # optional, default is 
+    # The regex of filenames excluded. A file is ignored when matching it even if it matches `include-regex`.
+    exclude-regex: # optional, default is ^$
+    # A JSON or JS function `(filename: string) => Record<string, string>` for HTTP response headers of uploaded file.
+    headers: # optional, default is {}
+    # Whether or not to delay upload of HTML file after other files.
+    delay-html-file-upload: # optional, default is false
+    # Whether or not to keep missing remote files compared to local.
+    no-delete-remote-files: # optional, default is false
+          
